@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """This module contain definition of the State class"""
 
 from models.base_model import BaseModel

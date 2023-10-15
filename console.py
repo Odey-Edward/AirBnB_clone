@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Definition of the HBNB command interpreter"""
 import cmd
 from models.base_model import BaseModel
