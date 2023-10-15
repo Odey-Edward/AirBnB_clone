@@ -15,7 +15,8 @@ class HBNBCommand(cmd.Cmd):
     """The HBNBCommand interpreter class"""
 
     prompt = "(hbnb) "
-    valid_class = ["BaseModel", "User", "Place", "State", "City", "Amenity", "Review"]
+    valid_class =\
+        ["BaseModel", "User", "Place", "State", "City", "Amenity", "Review"]
 
     def do_quit(self, line):
         """Quit command to exit the program\n"""
@@ -91,7 +92,7 @@ based on the class name and id\n"""
                             key[5:] == command[1] or\
                             key[6:] == command[1] or\
                             key[8:] == command[1] or\
-                            key[7:] == command[1]:
+                                key[7:] == command[1]:
                             print(all_objects[key])
                             return
                     __class__.default(self, "** no instance found **")
@@ -116,7 +117,7 @@ based on the class name and id\n"""
                             key[5:] == command[1] or\
                             key[6:] == command[1] or\
                             key[8:] == command[1] or\
-                            key[7:] == command[1]:
+                                key[7:] == command[1]:
                             del storage._FileStorage__objects[key]
                             storage.save()
                             return
@@ -263,7 +264,7 @@ based or not on the class name"""
                             key[5:] == args[0] or\
                             key[6:] == args[0] or\
                             key[8:] == args[0] or\
-                            key[7:] == args[0]:
+                                key[7:] == args[0]:
                             if len(args) > 1:
                                 if len(args) > 2:
                                     storage.\

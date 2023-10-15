@@ -3,6 +3,7 @@ import json
 from datetime import datetime
 import copy
 
+
 class FileStorage():
 
     __file_path = "file.json"
@@ -18,10 +19,9 @@ class FileStorage():
             del objects[key]["__class__"]
 
             objects[key]["created_at"] = datetime.\
-                    strptime(objects[key]["created_at"], os_format)
+                strptime(objects[key]["created_at"], os_format)
             objects[key]["updated_at"] = datetime.\
-                    strptime(objects[key]["updated_at"], os_format)
-
+                strptime(objects[key]["updated_at"], os_format)
 
             objects[key] = '[{}] ({}) {}'.\
                 format(obj_name, objects[key]["id"], objects[key])
