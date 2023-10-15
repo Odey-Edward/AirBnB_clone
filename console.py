@@ -15,8 +15,15 @@ class HBNBCommand(cmd.Cmd):
     """The HBNBCommand interpreter class"""
 
     prompt = "(hbnb) "
-    valid_class =\
-        ["BaseModel", "User", "Place", "State", "City", "Amenity", "Review"]
+    valid_class = [
+            "BaseModel",
+            "User",
+            "Place",
+            "State",
+            "City",
+            "Amenity",
+            "Review"
+            ]
 
     def do_quit(self, line):
         """Quit command to exit the program\n"""
@@ -28,7 +35,7 @@ class HBNBCommand(cmd.Cmd):
 
     def emptyline(self):
         """method called when line is empty"""
-        return cmd.Cmd.precmd(self, "")
+        pass
 
     def default(self, error_meg):
         """medthod called if command do not exist"""
