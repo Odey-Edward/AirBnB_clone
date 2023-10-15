@@ -111,7 +111,7 @@ based on the class name and id\n"""
             __class__.default(self, "** class name missing **")
 
     def do_destroy(self, line):
-        """Deletes an instance based on the class name and id"""
+        """Deletes an instance based on the class name and id\n"""
 
         command = cmd.Cmd.parseline(self, line)
 
@@ -232,7 +232,7 @@ based on the class name and id\n"""
 
     def do_all(self, line):
         """Prints all string representation of all instances\
-based or not on the class name"""
+based or not on the class name\n"""
 
         command = cmd.Cmd.parseline(self, line)
 
@@ -257,7 +257,7 @@ based or not on the class name"""
             __class__.print_obj()
 
     def do_update(self, line):
-        """Updates an instance based on the class name and id"""
+        """Updates an instance based on the class name and id\n"""
 
         command = cmd.Cmd.parseline(self, line)
 
