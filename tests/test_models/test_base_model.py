@@ -44,6 +44,7 @@ class TestBaseModel(unittest.TestCase):
 
     def test_to_dict(self):
         """test the for the to_dict public method"""
+        isoformat = self.b1.created_at.isoformat()
 
         self.assertTrue(hasattr(self.b1, "to_dict"))
         self.assertIsInstance(self.b1.to_dict(), dict)
@@ -56,6 +57,9 @@ class TestBaseModel(unittest.TestCase):
         self.assertEqual('BaseModel', b1_dict['__class__'])
         self.assertEqual('123376', b1_dict['id'])
         self.assertIsInstance(b1_dict['updated_at'], str)
+
+        self.assertEqual(isoformat, b1_dict['created_at'])
+        self.assertEqual(isoformat, b1_dict['created_at'])
 
     def test_save(self):
         """test for the BaseModel save() method"""
