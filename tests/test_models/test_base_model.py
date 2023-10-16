@@ -18,6 +18,8 @@ class TestBaseModel(unittest.TestCase):
 
     def test_uniqueId(self):
         """test for unique id"""
+        self.assertTrue(hasattr(self.b1, 'id'))
+        self.assertIsInstance(self.b1.id, str)
         self.assertNotEqual(self.b2.id, self.b1.id)
 
     def test_datetime(self):
@@ -31,4 +33,23 @@ class TestBaseModel(unittest.TestCase):
         self.b1.save()
 
         self.assertNotEqual(outdated_time, self.b1.updated_at)
+
+    def test_str(self):
+        """test the BaseModel class string representation"""
+        self.assertTrue(hasattr(self.b1, "__str__"))
+
+        self.b1.id = "123376"
+        b1_str = str(self.b1)
+        created_at = repr(self.b1.created_at)
+        updated_at = repr(self.b1.updated_at)
+
+        self.assertIn("[BaseModel] (123376)", b1_str)
+        self.assertIn("'created_at': " + created_at, b1_str)
+        self.assertIn("'updated_at': " + updated_at, b1_str)
+
+    def test_to_dict(self):
+        """test the for the to_dict public method"""
+
+        self.assertTrue(hasattr(self.b1, "to_dict"))
+        self.assertIsInstance(self.b1.to_dict(), dict)
 
