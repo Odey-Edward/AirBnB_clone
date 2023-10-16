@@ -2,7 +2,7 @@
 """base_model module"""
 from uuid import uuid4
 from datetime import datetime
-from models import storage
+import models
 
 
 class BaseModel:
@@ -19,13 +19,11 @@ class BaseModel:
                     self.created_at = datetime.strptime(kwargs[key], IsoFormat)
                 if key == "updated_at":
                     self.updated_at = datetime.strptime(kwargs[key], IsoFormat)
-        elif args:
-            storage.new(self)
         else:
             self.id = str(uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
-            storage.new(self)
+            models.storage.new(self)
 
     def __str__(self) -> str:
         """returns the string representation of class"""
@@ -39,8 +37,8 @@ class BaseModel:
         """
 
         self.updated_at = datetime.now()
-        storage.new(self)
-        storage.save()
+        models.storage.new(self)
+        models.storage.save()
 
     def to_dict(self):
         """
