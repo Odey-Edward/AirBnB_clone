@@ -28,7 +28,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertIsInstance(self.b1.updated_at, datetime)
         self.assertNotEqual(self.b1.created_at, self.b2.created_at)
         self.assertNotEqual(self.b1.updated_at, self.b2.updated_at)
-        
+
     def test_str(self):
         """test the BaseModel class string representation"""
         self.assertTrue(hasattr(self.b1, "__str__"))
@@ -59,7 +59,7 @@ class TestBaseModel(unittest.TestCase):
 
     def test_save(self):
         """test for the BaseModel save() method"""
-        
+
         outdated_time = self.b1.updated_at
         self.assertTrue(hasattr(self.b1, "save"))
         self.b1.save()
