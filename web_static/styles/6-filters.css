@@ -70,10 +70,12 @@
 
 .filters .amenities:hover .popover{
     opacity: 1;
+    pointer-events: all;
 }
 
 .filters .locations:hover .popover{
     opacity: 1;
+    pointer-events: all;
 }
 
 .filters .popover h2 {
