@@ -143,7 +143,8 @@ based on the class name and id\n"""
         all_object = storage.all()
 
         for key in all_object:
-            obj_array.append(all_object[key])
+            obj_array.append(str(all_object[key]))
+
         print(obj_array)
 
     @staticmethod
@@ -154,7 +155,7 @@ based on the class name and id\n"""
 
         for key in all_object:
             if key[:9] == obj_id:
-                model_array.append(all_object[key])
+                model_array.append(str(all_object[key]))
 
         print(model_array)
 
@@ -166,7 +167,7 @@ based on the class name and id\n"""
 
         for key in all_object:
             if key[:4] == obj_id:
-                user_array.append(all_object[key])
+                user_array.append(str(all_object[key]))
 
         print(user_array)
 
@@ -178,7 +179,7 @@ based on the class name and id\n"""
 
         for key in all_object:
             if key[:5] == obj_id:
-                place_array.append(all_object[key])
+                place_array.append(str(all_object[key]))
 
         print(place_array)
 
@@ -190,7 +191,7 @@ based on the class name and id\n"""
 
         for key in all_object:
             if key[:5] == obj_id:
-                state_array.append(all_object[key])
+                state_array.append(str(all_object[key]))
 
         print(state_array)
 
@@ -202,7 +203,7 @@ based on the class name and id\n"""
 
         for key in all_object:
             if key[:4] == obj_id:
-                city_array.append(all_object[key])
+                city_array.append(str(all_object[key]))
 
         print(city_array)
 
@@ -214,7 +215,7 @@ based on the class name and id\n"""
 
         for key in all_object:
             if key[:7] == obj_id:
-                amenity_array.append(all_object[key])
+                amenity_array.append(str(all_object[key]))
 
         print(amenity_array)
 
@@ -226,7 +227,7 @@ based on the class name and id\n"""
 
         for key in all_object:
             if key[:6] == obj_id:
-                review_array.append(all_object[key])
+                review_array.append(str(all_object[key]))
 
         print(review_array)
 
